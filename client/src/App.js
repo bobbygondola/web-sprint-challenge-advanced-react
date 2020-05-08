@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
+//sprint
+import Dark from "./components/Dark";
 
 import "./App.css";
 
@@ -23,6 +25,7 @@ function App() {
 
   return (
     <div>
+      <Dark />
       <Router>
         <nav className="container">
           <h1>

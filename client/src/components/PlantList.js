@@ -2,6 +2,21 @@ import React, { Component } from "react";
 import axios from "axios";
 
 export default class PlantList extends Component {
+  state = {
+    plants: [],
+  }
+
+  
+
+  componentDidMount() {
+    let url = "http://localhost:3333/plants"
+    axios.get(url)
+    .then((res) => {
+      console.log(res.data.plantsData)
+      this.setState({plants: res.data.plantsData})
+    })
+  }
+  
   // add state with a property called "plants" - initialize as an empty array
 
   // when the component mounts:
